@@ -1,0 +1,29 @@
+package AAtividade1.domain;
+
+public class Livros extends Produto{
+    protected String autor;
+
+    public Livros(int cod_Barras) {
+        super(cod_Barras);
+    }
+
+    public void dados(String nome, int preco, String autor) {
+        this.nome = nome;
+        this.preco = preco;
+        this.autor = autor;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()  +  "autor='" + this.autor +"'}";
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+}
