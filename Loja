@@ -1,0 +1,63 @@
+package AAtividade1.teste;
+
+import AAtividade1.domain.CDs;
+import AAtividade1.domain.DVDs;
+import AAtividade1.domain.Livros;
+import AAtividade1.domain.Produto;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Loja {
+
+    static int cod_Barras;
+
+    public static void main(String[] args) {
+
+        ArrayList<Produto> produtos = new ArrayList<>();
+
+        CDs cd0 = new CDs(5486315);
+        cd0.dados("Mickael Jackson", 45, 15);
+
+        CDs cd1 = new CDs(1563548);
+        cd1.dados("Linkin Park", 86, 42);
+
+        DVDs dvd0 = new DVDs(156548);
+        dvd0.dados("Jumanji", 120, "02:42");
+
+        Livros liv0 = new Livros(156486);
+        liv0.dados("Harry Potter", 86, "J. K. Rowling");
+
+        Livros liv1 = new Livros(564813);
+        liv1.dados("It - A Coisa", 178, "Stephen King");
+
+        produtos.add(cd0);
+        produtos.add(cd1);
+        produtos.add(dvd0);
+        produtos.add(liv0);
+        produtos.add(liv1);
+
+        for (Produto produto : produtos) {
+            System.out.println(produto.toString());
+        }
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nInforme o Código de Barras");
+        
+        cod_Barras = input.nextInt();
+        Loja.LocalizaProd(produtos, cod_Barras);
+
+    }
+
+    private static void LocalizaProd(ArrayList<Produto> produtos, int codBarras) {
+
+        for (Produto produto : produtos) {
+            if (produto.getCod_Barras() == cod_Barras) {
+                System.out.println(produto.toString());
+                return;
+            }
+        }
+        System.out.println("Produto não Encontrado");
+    }
+
+}
