@@ -1,0 +1,28 @@
+package AAtividade1.domain;
+
+public class DVDs extends Produto{
+    private String duracao;
+
+    public DVDs(int cod_Barras) {
+        super(cod_Barras);
+    }
+
+    public void dados(String nome, int preco, String duracao) {
+        this.nome = nome;
+        this.preco = preco;
+        this.duracao = duracao;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Duracao=" + this.duracao + "}";
+    }
+
+    public String getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(String duracao) {
+        this.duracao = duracao;
+    }
+}
