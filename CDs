@@ -1,0 +1,29 @@
+package AAtividade1.domain;
+
+public class CDs extends Produto{
+
+    private int numeroDeFaixas = 0;
+
+    public CDs(int cod_Barras) {
+        super(cod_Barras);
+    }
+
+    public void dados(String nome, int preco, int numeroDeFaixas) {
+        this.nome = nome;
+        this.preco = preco;
+        this.numeroDeFaixas = numeroDeFaixas;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "numeroDeFaixa=" + this.numeroDeFaixas + "}";
+    }
+
+    public int getNumeroDeFaixas() {
+        return numeroDeFaixas;
+    }
+
+    public void setNumeroDeFaixas(int numeroDeFaixas) {
+        this.numeroDeFaixas = numeroDeFaixas;
+    }
+}
