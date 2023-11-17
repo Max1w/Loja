@@ -1,0 +1,48 @@
+package AAtividade1.domain;
+
+public class Produto{
+    protected int cod_Barras;
+    protected String nome;
+    protected int preco;
+
+    public Produto(int cod_Barras) {
+        this.cod_Barras = cod_Barras;
+    }
+
+    public void dados(String nome, int preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "nome='" + nome + '\'' +
+                ", preco=" + preco +
+                ", ";
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getPreco() {
+        return preco;
+    }
+
+    public void setPreco(int preco) {
+        this.preco = preco;
+    }
+
+    public int getCod_Barras() {
+        return cod_Barras;
+    }
+
+    public void setCod_Barras(int cod_Barras) {
+        this.cod_Barras = cod_Barras;
+    }
+}
